@@ -1,8 +1,20 @@
+// @vendors
 import React from 'react'
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
 
+import { PRODUCT_CARD } from './styles'
+
 export const ProductCard = ({ product }) => {
   const { name, brand, categories, description, photo, price, stock } = product
+  const {
+    card,
+    titleBox,
+    titleContent,
+    bodyBox,
+    image,
+    descriptionBox,
+    descriptionText,
+  } = PRODUCT_CARD
 
   const RenderStockLabel = ({ stockToShow }) => (
     <Typography component="span">
@@ -19,9 +31,9 @@ export const ProductCard = ({ product }) => {
   )
 
   return (
-    <Card sx={{ display: 'flex', flexDirection: 'column', width: 800 }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-        <CardContent sx={{ flex: '1 0 auto' }}>
+    <Card sx={card}>
+      <Box sx={titleBox}>
+        <CardContent sx={titleContent}>
           <Typography component="div" variant="h5">
             {name}
           </Typography>
@@ -34,23 +46,10 @@ export const ProductCard = ({ product }) => {
           </Typography>
         </CardContent>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-        <CardMedia
-          component="img"
-          sx={{ width: 120, height: 120, p: 1, marginLeft: 5, marginBottom: 2 }}
-          src={photo}
-          alt="Product image"
-        />
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            marginLeft: 2,
-            marginRight: 2,
-            marginBottom: 1,
-          }}
-        >
-          <Typography component="p" sx={{ marginBottom: 1 }}>
+      <Box sx={bodyBox}>
+        <CardMedia component="img" sx={image} src={photo} alt="Product image" />
+        <Box sx={descriptionBox}>
+          <Typography component="p" sx={descriptionText}>
             {description}
           </Typography>
           <RenderStockLabel stockToShow={stock} />

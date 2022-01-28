@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Box } from '@mui/system'
 import { useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Typography } from '@mui/material'
 
-import { ProductsDrawer } from '../components/ProductsDrawer'
-import { ProductsInfo } from '../components/ProductsInfo'
-import { ProductsList } from '../components/ProductsList'
+import { GeneralPageContainer } from '../components/generalPageContainer'
+import { ProductsDrawer } from '../components/productsDrawer'
+import { ProductsInfo } from '../components/productsInfo'
+import { ProductsList } from '../components/productsList'
 import { getProductsRequest } from '../api/products'
 import {
   setProductsAmount,
@@ -87,7 +87,7 @@ export const Products = () => {
   return (
     <>
       <ProductsDrawer />
-      <Box component="main" sx={{ flexGrow: 1, p: 2, marginTop: 7 }}>
+      <GeneralPageContainer>
         {!productsToShow ? (
           <Typography variant="subtitle1" gutterBottom component="div">
             Loading...
@@ -95,7 +95,7 @@ export const Products = () => {
         ) : (
           renderProducts()
         )}
-      </Box>
+      </GeneralPageContainer>
     </>
   )
 }
