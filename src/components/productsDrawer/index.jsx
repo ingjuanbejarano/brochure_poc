@@ -1,3 +1,4 @@
+// @vendors
 import React from 'react'
 import {
   Box,
@@ -15,7 +16,10 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter'
 import BusinessIcon from '@mui/icons-material/Business'
 import { Link } from 'react-router-dom'
 
+// @styles
 import { PRODUCTS_DRAWER } from './styles'
+
+// @constants
 import { drawerRoutes } from './constants'
 
 export const ProductsDrawer = () => {

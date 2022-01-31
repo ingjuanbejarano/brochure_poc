@@ -1,7 +1,10 @@
+// @vendors
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
+// @styles
 import { NAVBAR_LINK } from './styles'
 
 export const NavbarLink = ({ link, label }) => {
@@ -18,4 +21,9 @@ export const NavbarLink = ({ link, label }) => {
       {label}
     </Typography>
   )
+}
+
+NavbarLink.propTypes = {
+  link: PropTypes.string,
+  label: PropTypes.string,
 }

@@ -1,13 +1,19 @@
+// @vendors
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Typography } from '@mui/material'
 
+// @components
 import { GeneralPageContainer } from '../components/generalPageContainer'
 import { ProductsDrawer } from '../components/productsDrawer'
 import { ProductsInfo } from '../components/productsInfo'
 import { ProductsList } from '../components/productsList'
+
+// @api
 import { getProductsRequest } from '../api/products'
+
+// @redux
 import {
   setProductsAmount,
   setProductsToShow,

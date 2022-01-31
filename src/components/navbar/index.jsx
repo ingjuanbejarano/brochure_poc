@@ -1,9 +1,15 @@
+// @vendors
 import React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 
+// @styles
 import { NAVBAR } from './styles'
+
+// @constants
 import { navbarRoutes } from './constants'
+
+// @components
 import { NavbarLink } from '../navbarLink'
 
 export const NavBar = () => {

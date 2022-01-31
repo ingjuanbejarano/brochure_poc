@@ -1,7 +1,9 @@
 // @vendors
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
 
+// @styles
 import { PRODUCT_CARD } from './styles'
 
 export const ProductCard = ({ product }) => {
@@ -58,4 +60,8 @@ export const ProductCard = ({ product }) => {
       </Box>
     </Card>
   )
+}
+
+ProductCard.propTypes = {
+  product: PropTypes.object,
 }

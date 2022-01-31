@@ -1,6 +1,9 @@
+// @vendors
 import React from 'react'
+import PropTypes from 'prop-types'
 import { List, ListItem } from '@mui/material'
 
+// @components
 import { ProductCard } from '../productCard'
 
 export const ProductsList = ({ productsToShow }) => (
@@ -12,3 +15,7 @@ export const ProductsList = ({ productsToShow }) => (
     ))}
   </List>
 )
+
+ProductsList.propTypes = {
+  productsToShow: PropTypes.array,
+}

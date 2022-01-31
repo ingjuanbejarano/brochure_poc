@@ -1,6 +1,8 @@
+// @vendors
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+// @components
 import { Home, Products, Clients, Contact } from '../pages'
 
 export const Router = () => {

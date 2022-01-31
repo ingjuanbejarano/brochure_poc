@@ -1,6 +1,9 @@
+// @vendors
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Box } from '@mui/system'
 
+// @styles
 import { GENERAL_PAGE_CONTAINER } from './styles'
 
 export const GeneralPageContainer = ({ children }) => {
@@ -11,4 +14,8 @@ export const GeneralPageContainer = ({ children }) => {
       {children}
     </Box>
   )
+}
+
+GeneralPageContainer.propTypes = {
+  children: PropTypes.node,
 }

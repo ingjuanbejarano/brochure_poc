@@ -1,3 +1,4 @@
+// @components
 import { Home } from './Home'
 import { Products } from './Products'
 import { Clients } from './Clients'

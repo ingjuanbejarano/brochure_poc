@@ -1,5 +1,7 @@
+// @vendors
 import React from 'react'
 
+// @components
 import { GeneralPageContainer } from '../components/generalPageContainer'
 
 export const Contact = () => (
